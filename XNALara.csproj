@@ -1,0 +1,461 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <ProjectGuid>{B6E3BD3D-D214-412C-8974-DA5DC9C4F426}</ProjectGuid>
+    <ProjectTypeGuids>{6D335F3A-9D43-41b4-9D22-F6F17C4BE596};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>XNALara</RootNamespace>
+    <AssemblyName>XNALara</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <XnaFrameworkVersion>v3.0</XnaFrameworkVersion>
+    <XnaPlatform>Windows</XnaPlatform>
+    <XnaCrossPlatformGroupID>51b87f65-cdc3-418a-ad33-1dac9ad61054</XnaCrossPlatformGroupID>
+    <ApplicationIcon>XNALara.ico</ApplicationIcon>
+    <Thumbnail>GameThumbnail.png</Thumbnail>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <ManifestCertificateThumbprint>988888EE1D02B0B4983256622F7A9F12E8FA3A16</ManifestCertificateThumbprint>
+    <ManifestKeyFile>XNALara_TemporaryKey.pfx</ManifestKeyFile>
+    <GenerateManifests>true</GenerateManifests>
+    <SignManifests>true</SignManifests>
+    <StartupObject>
+    </StartupObject>
+    <NoWin32Manifest>true</NoWin32Manifest>
+    <PublishUrl>C:\temp\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>false</MapFileExtensions>
+    <OpenBrowserOnPublish>false</OpenBrowserOnPublish>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.0</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>false</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\x86\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE;WINDOWS</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <PlatformTarget>x86</PlatformTarget>
+    <XnaCompressContent>false</XnaCompressContent>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\x86\Release</OutputPath>
+    <DefineConstants>TRACE;WINDOWS</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <PlatformTarget>x86</PlatformTarget>
+    <XnaCompressContent>true</XnaCompressContent>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Xna.Framework, Version=3.0.0.0, Culture=neutral, PublicKeyToken=6d5c3888ef60e27d, processorArchitecture=x86" />
+    <Reference Include="Microsoft.Xna.Framework.Game, Version=3.0.0.0, Culture=neutral, PublicKeyToken=6d5c3888ef60e27d, processorArchitecture=MSIL">
+      <Private>False</Private>
+      <SpecificVersion>True</SpecificVersion>
+    </Reference>
+    <Reference Include="mscorlib">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AboutBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AboutBox.designer.cs">
+      <DependentUpon>AboutBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Armature.cs" />
+    <Compile Include="BackgroundImage.cs" />
+    <Compile Include="BasisTransformMatrix.cs" />
+    <Compile Include="Billboard.cs" />
+    <Compile Include="Items\CroftManorBack.cs" />
+    <Compile Include="Items\GoLBruteMinion.cs" />
+    <Compile Include="Items\GoLChompy.cs" />
+    <Compile Include="Items\GoLDoppelganger.cs" />
+    <Compile Include="Items\GoLFireLizard.cs" />
+    <Compile Include="Items\GoLFireShaman.cs" />
+    <Compile Include="Items\GoLLara.cs" />
+    <Compile Include="Items\GoLLaraBiker.cs" />
+    <Compile Include="Items\GoLLaraJungleHeavy.cs" />
+    <Compile Include="Items\GoLLaraJungleShorts.cs" />
+    <Compile Include="Items\GoLLaraLegend.cs" />
+    <Compile Include="Items\GoLPoisonGatekeeper.cs" />
+    <Compile Include="Items\GoLPoisonLizard.cs" />
+    <Compile Include="Items\GoLPoisonMinion.cs" />
+    <Compile Include="Items\GoLPoisonShaman.cs" />
+    <Compile Include="Items\GoLShieldDemon.cs" />
+    <Compile Include="Items\GoLShieldGatekeeper.cs" />
+    <Compile Include="Items\GoLSkeleton.cs" />
+    <Compile Include="Items\GoLSmallMinion.cs" />
+    <Compile Include="Items\GoLTotec.cs" />
+    <Compile Include="Items\GoLTRex.cs" />
+    <Compile Include="Items\GoLXolotl.cs" />
+    <Compile Include="Items\HairAlister.cs" />
+    <Compile Include="Items\HairAmanda.cs" />
+    <Compile Include="Items\FoliageTree1.cs" />
+    <Compile Include="Items\FoliageTree2.cs" />
+    <Compile Include="Items\FoliageTree3.cs" />
+    <Compile Include="Items\FoliageTree4.cs" />
+    <Compile Include="Items\GlassCage.cs" />
+    <Compile Include="Items\AlbinoSpider.cs" />
+    <Compile Include="Items\Glasses.cs" />
+    <Compile Include="Items\HairNatla.cs" />
+    <Compile Include="Items\KnightThrall.cs" />
+    <Compile Include="Items\LaraDLCBikiniBlackWhite.cs" />
+    <Compile Include="Items\LaraDLCBikiniBlue.cs" />
+    <Compile Include="Items\LaraDLCBikiniCamo.cs" />
+    <Compile Include="Items\LaraDLCBikiniYellow.cs" />
+    <Compile Include="Items\LaraDLCCasualExplorer.cs" />
+    <Compile Include="Items\LaraDLCClassic.cs" />
+    <Compile Include="Items\LaraDLCDesignerFashionWinner.cs" />
+    <Compile Include="Items\LaraDLCDesignerPeoplesChoice.cs" />
+    <Compile Include="Items\LaraDLCDrySuitRed.cs" />
+    <Compile Include="Items\LaraDLCJungleShortsGrey.cs" />
+    <Compile Include="Items\LaraDLCLegend.cs" />
+    <Compile Include="Items\LaraDLCWetSuitBlue.cs" />
+    <Compile Include="Items\Ponytail.cs" />
+    <Compile Include="Items\Scion1.cs" />
+    <Compile Include="Items\Scion2.cs" />
+    <Compile Include="Items\Scion3.cs" />
+    <Compile Include="Items\SharkGreenland.cs" />
+    <Compile Include="Items\Ship.cs" />
+    <Compile Include="Items\ShipNatlaRoom.cs" />
+    <Compile Include="Items\ThailandMirrorStatueLeft.cs" />
+    <Compile Include="Items\ThailandMirrorStatueRight.cs" />
+    <Compile Include="Items\Wings.cs" />
+    <Compile Include="LoadSceneDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoadSceneDialog.Designer.cs">
+      <DependentUpon>LoadSceneDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MeshAsciiExporter.cs" />
+    <Compile Include="PoseFlip.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PoseMirror.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PostProcessParamsDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PostProcessParamsDialog.Designer.cs">
+      <DependentUpon>PostProcessParamsDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ResolveBackBuffer.cs" />
+    <Compile Include="ShaderDict.cs" />
+    <Compile Include="SplashForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SplashForm.Designer.cs">
+      <DependentUpon>SplashForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TextureCombiner.cs" />
+    <Compile Include="AddItemDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddItemDialog.Designer.cs">
+      <DependentUpon>AddItemDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CameraParamsDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CameraParamsDialog.Designer.cs">
+      <DependentUpon>CameraParamsDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CameraTurnTableState.cs" />
+    <Compile Include="ConfigImportExport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DictionaryKeyNotFoundException.cs" />
+    <Compile Include="HUD.cs" />
+    <Compile Include="Items\Alister.cs" />
+    <Compile Include="Items\AmandaHeavy.cs" />
+    <Compile Include="Items\AmandaLight.cs" />
+    <Compile Include="Items\Amelia.cs" />
+    <Compile Include="Item.cs" />
+    <Compile Include="Items\Braid.cs" />
+    <Compile Include="Items\CroftManorHallLQ.cs" />
+    <Compile Include="Items\ExternObj.cs" />
+    <Compile Include="Items\Helicopter.cs" />
+    <Compile Include="Items\Jellyfish.cs" />
+    <Compile Include="Items\Kraken.cs" />
+    <Compile Include="Items\LaraBathingSuit.cs" />
+    <Compile Include="Items\LaraBathingSuitNoGear.cs" />
+    <Compile Include="Items\LaraSnowLight.cs" />
+    <Compile Include="Items\Mercenary.cs" />
+    <Compile Include="Items\NagaGreen.cs" />
+    <Compile Include="Items\NagaRed.cs" />
+    <Compile Include="Items\SkyDomeThailandSea.cs" />
+    <Compile Include="Items\VikingThrall.cs" />
+    <Compile Include="Items\WeaponGrenade.cs" />
+    <Compile Include="Items\WraithStone.cs" />
+    <Compile Include="Items\Yacht.cs" />
+    <Compile Include="Items\YetiThrallNoChains.cs" />
+    <Compile Include="ItemType.cs" />
+    <Compile Include="Items\CroftManorHall.cs" />
+    <Compile Include="Items\DiverCaptain.cs" />
+    <Compile Include="Items\Doppelganger.cs" />
+    <Compile Include="Items\Dummy.cs" />
+    <Compile Include="Items\Excalibur.cs" />
+    <Compile Include="Items\Grapple.cs" />
+    <Compile Include="ItemDesc.cs" />
+    <Compile Include="Items\Lara.cs" />
+    <Compile Include="Items\LaraCasual.cs" />
+    <Compile Include="Items\LaraDrySuit.cs" />
+    <Compile Include="Items\LaraJungleHeavy.cs" />
+    <Compile Include="Items\LaraJunglePants.cs" />
+    <Compile Include="Items\LaraJungleShorts.cs" />
+    <Compile Include="Items\LaraSnowHeavy.cs" />
+    <Compile Include="Items\LaraWetSuit.cs" />
+    <Compile Include="Items\LaraWetSuitNoGear.cs" />
+    <Compile Include="Items\MayanThrall.cs" />
+    <Compile Include="MeshGroupNames.cs" />
+    <Compile Include="Items\Mjolnir.cs" />
+    <Compile Include="Items\Motorcycle.cs" />
+    <Compile Include="Items\Natla.cs" />
+    <Compile Include="Items\NatlaNoWings.cs" />
+    <Compile Include="Items\Panther.cs" />
+    <Compile Include="Items\PantherThrall.cs" />
+    <Compile Include="Items\Poacher.cs" />
+    <Compile Include="Items\Recorder.cs" />
+    <Compile Include="Items\SharkBlue.cs" />
+    <Compile Include="Items\Tiger1.cs" />
+    <Compile Include="Items\Tiger2.cs" />
+    <Compile Include="Items\WeaponAKRifle.cs" />
+    <Compile Include="Items\WeaponAssaultRifle.cs" />
+    <Compile Include="Items\WeaponHandgun.cs" />
+    <Compile Include="Items\WeaponShotgun.cs" />
+    <Compile Include="Items\WeaponSpeargun.cs" />
+    <Compile Include="Items\WeaponTranquilizer.cs" />
+    <Compile Include="Items\WeaponUzi.cs" />
+    <Compile Include="Items\Winston.cs" />
+    <Compile Include="Items\YetiThrall.cs" />
+    <Compile Include="Items\Zip.cs" />
+    <Compile Include="ControlGUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ControlGUI.Designer.cs">
+      <DependentUpon>ControlGUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BoneSelector.cs" />
+    <Compile Include="CameraTurnTable.cs" />
+    <Compile Include="FullScreenSprite.cs" />
+    <Compile Include="HelpBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HelpBox.Designer.cs">
+      <DependentUpon>HelpBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModelLoaderObj.cs" />
+    <Compile Include="MosaicRenderer.cs" />
+    <Compile Include="PoseFilterDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PoseFilterDialog.Designer.cs">
+      <DependentUpon>PoseFilterDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PoseImportExport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Renderer.cs" />
+    <Compile Include="LightingParamsDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LightingParamsDialog.Designer.cs">
+      <DependentUpon>LightingParamsDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SaveImageDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SaveImageDialog.Designer.cs">
+      <DependentUpon>SaveImageDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KeyboardEventHandler.cs" />
+    <Compile Include="Mesh.cs" />
+    <Compile Include="MeshDesc.cs" />
+    <Compile Include="MeshObjExporter.cs" />
+    <Compile Include="ModelLoader.cs" />
+    <Compile Include="Model.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="RenderToTexture.cs" />
+    <Compile Include="SceneImportExport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SkyDomeParamsDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SkyDomeParamsDialog.Designer.cs">
+      <DependentUpon>SkyDomeParamsDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TextureManager.cs" />
+    <Compile Include="ThorWireframeSplitter.cs" />
+    <Compile Include="TreeViewMultiSelect.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UndoHistory.cs" />
+    <Compile Include="UndoHistoryState.cs" />
+    <Compile Include="Utils.cs" />
+    <Compile Include="VertexFormat.cs" />
+    <Compile Include="VertexPositionNormalColorTexture.cs" />
+    <Compile Include="VertexPositionNormalColorTextureTangent.cs" />
+    <Compile Include="VertexPositionNormalTexture2.cs" />
+    <Compile Include="VertexPositionColorNormalTextureTangentBones.cs" />
+    <Compile Include="Game.cs" />
+    <Compile Include="VertexPositionTexture.cs" />
+    <Compile Include="CanvasSizeDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CanvasSizeDialog.Designer.cs">
+      <DependentUpon>CanvasSizeDialog.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Game.ico" />
+    <Content Include="GameThumbnail.png" />
+    <Content Include="XNALara.ico" />
+    <None Include="XNALaraIcon22.png" />
+    <None Include="XNALaraWatermark.png" />
+    <None Include="XNALaraSplash.png" />
+    <None Include="XNALaraAbout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <NestedContentProject Include="Content\Content.contentproj">
+      <Project>909ed7bd-6a8a-4a46-b67b-df14291da589</Project>
+      <Visible>False</Visible>
+    </NestedContentProject>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Xna.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft XNA Framework Redistributable 3.0</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="AboutBox.resx">
+      <DependentUpon>AboutBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddItemDialog.resx">
+      <DependentUpon>AddItemDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CameraParamsDialog.resx">
+      <DependentUpon>CameraParamsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlGUI.resx">
+      <DependentUpon>ControlGUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HelpBox.resx">
+      <DependentUpon>HelpBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LightingParamsDialog.resx">
+      <DependentUpon>LightingParamsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoadSceneDialog.resx">
+      <DependentUpon>LoadSceneDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PoseFilterDialog.resx">
+      <DependentUpon>PoseFilterDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PostProcessParamsDialog.resx">
+      <DependentUpon>PostProcessParamsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SaveImageDialog.resx">
+      <DependentUpon>SaveImageDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SkyDomeParamsDialog.resx">
+      <DependentUpon>SkyDomeParamsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CanvasSizeDialog.resx">
+      <DependentUpon>CanvasSizeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SplashForm.resx">
+      <DependentUpon>SplashForm.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\XNA Game Studio\Microsoft.Xna.GameStudio.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
